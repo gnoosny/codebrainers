@@ -25,3 +25,23 @@ print(lista2)
 print(tekst2)
 print(logika2)
 print(none2)
+
+# to jest komentarz w pythonie, wielolinijkowych komentarzy nie ma
+print('\n')
+
+if none1 == none2: print("tak nony sa rowne")
+print('\n')
+
+if liczba1 == liczba2:
+	print('tak liczba1 i liczba2 sa rowne')
+elif ulamek1 <= ulamek2:
+	print('ulamek1 jest mniejszy od ulamka2 i wynosi', ulamek1)
+	
+print('\n')
+
+if liczba1 == liczba2:
+	print('tak liczba1 i liczba2 sa rowne')
+elif ulamek1 >= ulamek2:
+	print('ulamek1 jest mniejszy od ulamka2')
+else:
+	print('tu nic nie ma sensu')
