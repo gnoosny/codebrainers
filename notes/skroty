@@ -1,0 +1,30 @@
+ls -l -a  - list directory in rows with hidden files
+plik zaczynajacy sie od kropki ( . ) jest plikiem ukrytym
+ls -l -h - list directory in human readable mode
+ls -lath - flagi mozna ze soba laczyc
+ls -t - sortuje pliki po czasie modyfikacji
+ls -r - odwraca kolejnosc sortowania
+touch nowyplik.txt - tworzenie pliku
+cat plik.txt - wyswietlenie zawartosci pliku
+cp plik.txt plik2.txt - kopiowanie pliku
+mv plik2.txt plik3.txt - przenosenie pliku
+rm plik.txt - usuwanie pliku
+rm Desktop/ -R - usuwanie calego katalogu z zawartoscia
+du - pokazuje drzewo katalogu
+find ./ -name 'polecenia.txt' - szukanie pliku polecenia.txt w katalogu lokalnym
+find ./ -name 'polecenia' - szukanie katalogu polecenia w katalogu lokalnym
+find ./ -name '*polecenia*' - szukanie pliku cos polecenia cos w katalogu lokalnym
+find ./ -iname 'polecenia' - szukanie czegos z ignorowaniem wielkosci znakow
+find ./ -iname 'poleCe*' -type f - ograniczenie wyszukiwania do plikow
+find ./ -iname 'poleCe*' -type d - ograniczenie wyszukiwania do katalogow
+find --help - pomoc programu find
+man find - rozbudowana pomoc programu find
+grep - szuka tresci w plikach (przeszukuje zawartosc pliku)
+grep 'tail' polecenia.txt - szuka wyrazu tail w pliku polecenia.txt
+grep 'tail' Desktop/ -R - szuka wyrazu tail we wszystkich plikach/katalogach danego katalogu
+grep 'tail' ./ -R -n  szuka wyrazu tail we wszystkich plikach/katalogach obecnego katalogu i podaje linie w ktorej jest wyraz tail
+grep 'tail' ./ -R -n -i  szuka wyrazu tail we wszystkich plikach/katalogach obecnego katalogu i podaje linie w ktorej jest wyraz tail oraz ignoruje wielkosc liter
+tar -xf plik.tar - rozpakowuje plik tar
+
+
+

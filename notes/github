@@ -1,0 +1,33 @@
+system kontroli wersji GIT
+
+ssh-keygen --help
+
+ssh-keygen -t rsa -b 4096 	-szyfrowanie rsa
+-t 	- typ klucza (rsa w tym przypadku)
+-b 	- dlugosc klucza
+
+git config --global user.name "gnoosny"
+git config --global user.email "gnoosny@gmail.com"
+
+git init 	- tworzenie repozytorium w danym katalogu
+git remote add origin git@github.com:gnoosny/codebrainers.git	- dodawanie serwera (serwer origin) i adres repozytorium w ssh (git@github.com:gnoosny/codebrainers.git)
+
+git add przykladowy_plik 	- commitowanie przykladowego pliku do gita
+
+git commit 	- otwiera sie edytor nano, w ktorym trzeba cos wpisac np First commit, zapisujemy plik (pod taka nazwa jaka wyskakuje). To zapisuje zmiany w gicie na naszym komputerze
+
+
+git push --set-upstream origin master  	- wysylanie zmian w gicie na serwer
+
+edycja
+git add
+git commit    	(tutaj dobrze jest wpisac temat zmian i jakie zostaly wprowadzine zmiany)
+git push 
+Tak sie wprowadza zmiany w juz zalozonym wczesniej repozytorium
+
+
+shebang line
+
+
+
+

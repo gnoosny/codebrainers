@@ -1,0 +1,60 @@
+23.02.2018
+
+python -zwykly python
+ipython - python z kolorowaniem skladni, wcieciami auto itp.
+
+print('hello world') -hello world
+2**2 - 2 do 2 potegi
+pow(2,2) - 2 do 2 potegi
+5 // 3 - dzielenie calkowite (wynik 1)
+5%3 - modulo (wynik 2)
+
+In [26]: "to jest "*6 + "tekst"
+Out[26]: 'to jest to jest to jest to jest to jest to jest tekst'
+
+In [27]: """Pisanie
+    ...: w wielu linijkach
+    ...: :)"""
+Out[27]: 'Pisanie\nw wielu linijkach\n:)'
+
+In [30]: "\t - to jest tabulator"
+Out[30]: '\t - to jest tabulator'
+
+nazwa = "value" - zmienna nazwa o wartosci value (string)
+index = 1 - zmienna index o wartości 1
+
+w pythonie True i False musza sie zaczynac z duzych liter
+
+None - typ jak null
+
+[elemnt, elemnet, element] - lista czyli tablica w pythonie
+
+In [104]: [index, index+1, index+2]
+Out[104]: [1, 2, 3]
+
+lista[-1] - pokazuje ostatnia wartosc listy (tablicy)
+
+In [107]: lista2[0:2] 
+Out[107]: ['kot', 'pies'] 	- wypisuje z listy elementy 0 i 1
+
+lista[:4] - pierwsze 4 elementy
+lista[4:] - od czwartego do konca
+lista[0::2] - wypisuje nieparzyste elementy
+lista[::-1] - wypisuje liste w odwrotnej kolejnosci
+lista[1:4:1] - wypisuje OD 1 DO 4 CO 1
+
+lista[index] - w zaleznosci co jest w indexie wypisuje ten element (np index =1)
+
+lista.append('Leszek') - dodawanie nowej 
+wartosci na koniec listy
+
+len(lista) - zlicza ilosc elementow w liscie
+len(string) - zlicza ilosc znakow w stringu
+
+25.02.2018
+dokument nazywajacy sie pep008 mowi o tym jak komentuje sie w pythonie (jaki jest styl ktory powinno wygladac)
+
+
+pass - slowo ktore uzywa sie w pythonie jezeli nie ma instrukcji, ale chce sie przejsc dalej w warunku lub petli
+
+
