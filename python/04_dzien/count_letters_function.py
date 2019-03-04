@@ -10,6 +10,6 @@ for i in text:
 		dict[i] += 1
 	else:
 		dict[i] = 1
-	print(dict)
+print(dict)
 	
 dictionary(text)
