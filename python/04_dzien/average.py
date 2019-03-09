@@ -31,4 +31,4 @@ avg_geo = avg_geo*(1/len(list))
 
 print("srednia geometryczna: " + str(avg_geo))
 
-
+print(stdev(sorted_score))
