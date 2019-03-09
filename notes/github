@@ -29,6 +29,12 @@ git pull - sciaganie plikow z
 
 shebang line
 
+git branch - informuje na jakiej jestes galezi
+git branch zmiana_logowania - otworzenie nowego brancha
+git checkout zmiana_logowania - przelaczenie sie na branch zmiana_logowania
+
+mozna tez:
+git checkout -b zmiana_logowania - tworzy nowy branch i na niego przelacza
 
 
 
