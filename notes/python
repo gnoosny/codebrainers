@@ -130,3 +130,52 @@ try:
 	pass #kod ktory spowoduje powstanie bledow
 except ValueError:
 	print("wystapil problem")
+	
+OBSLUGA PLIKOW
+
+tryb pracy w pythonie w plikach:
+
+1. otwarcie
+2. praca
+3. zamkniecie
+
+
+f = open('plik.txt', {tryb otwarcia}{druga litera})
+
+przyklad:
+f = open('plik.txt', 'rt')
+
+tryby otwarcia plikow:
+r - read
+w - write
+a - append
+
+t - tryb tekstowy
+b - tryb binarny (bajtowy)
+
+f.write('Ten kurs jest swietny') - wpisywanie tresci do pliku
+f.close() 	- zamkniecie pliku
+
+f.closed - zwraca informacje True or False czy plik jest zamkniety
+
+druga litera nie jest wymagana
+
+Context manager:
+with open('plik2.txt', 'w') as f:
+     f.write("To jest drugie podejscie do zapisywania pliku")
+Taka instrukcja sprawia ze nie musimy zamykac pliku bo python robi to za nas z automatu
+
+open('plik.txt', {tryb otwarcia}, encoding = 'utf-8') - otwieranie z kodowaniem utf-8
+
+csv - comma seperated values (taki ubogi excel)
+pierwszy wiersz powinien byc naglowkowy, ale nie musi
+
+
+DATA MINING:
+1. zbieranie danych
+2. opisywanie danych
+3. tworzenie csv
+4. odczyt csv w pythonie
+5. konwersja wartosci (np ze stringa na int)
+6. zjadliwa forma danych
+7. 
