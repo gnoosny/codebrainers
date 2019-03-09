@@ -24,6 +24,7 @@ git add
 git commit    	(tutaj dobrze jest wpisac temat zmian i jakie zostaly wprowadzine zmiany)
 git push 
 Tak sie wprowadza zmiany w juz zalozonym wczesniej repozytorium
+git pull - sciaganie plikow z 
 
 
 shebang line

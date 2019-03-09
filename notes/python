@@ -57,4 +57,76 @@ dokument nazywajacy sie pep008 mowi o tym jak komentuje sie w pythonie (jaki jes
 
 pass - slowo ktore uzywa sie w pythonie jezeli nie ma instrukcji, ale chce sie przejsc dalej w warunku lub petli
 
+python -m http.server - uruchamianie serwera w pythonie
 
+konwersja 
+str(zmienna) - zmienna do stringa
+int(zmienna) - zmienna do inta
+float(zmienna) - zmienna do floata
+bool(zmienna) - zmienna do boola
+
+bool("") 	- False
+bool("cos") 	- True
+bool([]) 	- False
+bool(None) 	- False
+
+Operatory logiczne pythona:
+and
+or
+is
+not
+
+if zmienna and zmienna2 - jezeli zmienna i zmienna2 sa True to warunek sie spelni
+
+zmienna = 1 and 2 - python do zmiennej przypisze wartosc po and czyli 2
+
+zmienna = 1 or 2 - python przypisze do zmiennej pierwsza liczbe
+
+is - jest to operator porownania ktory sprawdza typ obiektu(tak jak === w javascript)
+
+range (1,11) - wypluwa liczby od 1 do 10
+
+inne typy:
+
+krotka = (1, 2, 3, 4, 5)
+slownik = {
+	"haslo": "definicja",
+	"amendment": "poprawka"
+}
+slownik["haslo"]
+
+zbior = {1, 2, 3, 4}
+
+krotka (tuple) - tuple sa niemozliwe do zmiany
+
+slownik (dict) - to jest ccos jak obiekt w js
+do slownika jako klucz mozna wrzucic krotke, ale nie mozna wrzucic listy
+w slowniku jako klucz mozna wykorzystywac inty, floaty, krotki oraz stringi
+
+zbior (set) - kolejnosc elementow w zbiorze jest nieokreslona i elementy sie nie powtarzaja
+czyli wypisanie zbioru {1, 2, 3, 2} da rezultat {1, 2, 3} i nie da sie zrobic np. zbior[2]
+
+sprawdzanie czy cos jes w liscie (tupli, slowniku)
+
+if cos in lsta:
+	print("cos znajduje sie w liscie")
+	
+docs.python.org - dokumentacja pythona
+
+
+continue - rozkaz kontynuacji petli
+break - skoncz petle jezeli warunek jest spelniony
+
+FUNKCJE:
+
+def fibonacci():	- definiowanie funkcji
+	pass
+	
+fibonacci()		- wywolywanie funkcji
+
+
+chwytanie wyjatkow:
+try: 
+	pass #kod ktory spowoduje powstanie bledow
+except ValueError:
+	print("wystapil problem")
