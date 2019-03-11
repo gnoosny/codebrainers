@@ -179,4 +179,26 @@ DATA MINING:
 5. konwersja wartosci (np ze stringa na int)
 6. zjadliwa forma danych
 
+Tetowanie oprogramowania:
+Travis-CI.org
 
+
+komentarze wielolinijkowe (docstring):
+""" cos tam
+cos tam
+cos tam """
+
+dunder - double under (podwojne znaki podkreslenia [podlogi __ ] )
+
+Importowanie do pythona:
+
+w katalogu z programem python wpisac
+python
+import nazwa_programu.py  - importowanie calego programyu
+
+from docstring import min - importowanie samej funkcji min z pliku docstring.py
+
+if __name__ == "__main__":	- to upewnia sie ze kod nie wykona sie w interpreterze jezeli tam zaimportujemy ten program
+mozna ten kod wywolac jedynie poprzez terminal:
+
+python program.py

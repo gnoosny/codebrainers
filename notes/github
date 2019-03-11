@@ -36,5 +36,9 @@ git checkout zmiana_logowania - przelaczenie sie na branch zmiana_logowania
 mozna tez:
 git checkout -b zmiana_logowania - tworzy nowy branch i na niego przelacza
 
+wysylanie na serwer w kolaboracji:
+git -u
+albo 
+git --set-upstream
 
-
+git push -u origin smth - wyslanie na serwer 

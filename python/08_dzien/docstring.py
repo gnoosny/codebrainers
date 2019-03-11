@@ -55,6 +55,7 @@ def min(L):
 			min_val = i
 
 	return min_val
+#ponizszy warunek sprawi, ze kod w nim zawarty wkona sie tylko wtedy, gdy modul wywolany jest bezposrednio: $ python docstring.py
 
 if __name__ == "__main__":
 	import doctest
