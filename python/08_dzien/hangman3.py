@@ -29,9 +29,11 @@ elif space > 0:
 letter = input("enter a letter: ")
 
 def search(letter):
-  for number, letter in enumerate(password):
+  #for number, letter in enumerate(password):
     if letter in password:
-      print(number)
+      print("yes")
+      print(password.index(letter))
+      print(hash[0:password.index(letter)] + letter)
     else:
       print("no")
 
