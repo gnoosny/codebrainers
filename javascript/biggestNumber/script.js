@@ -7,7 +7,7 @@ biggestNum = [];
 biggestNum.push(a);
 biggestNum.push(b);
 biggestNum.push(c);
-biggest = 0;
+biggest = biggestNum[0];
 
 for(let i = 0; i < biggestNum.length; i++) {
 	if (biggestNum[i] > biggest) {
