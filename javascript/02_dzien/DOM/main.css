@@ -1,0 +1,15 @@
+.paragraf.red {
+    color: blue;
+}
+
+.red {
+    color:red;
+}
+
+.paragraf .blue {
+    color: green;
+}
+
+#unikat {
+    font-size: 50px;
+}
