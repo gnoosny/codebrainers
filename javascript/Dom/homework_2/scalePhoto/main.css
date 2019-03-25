@@ -1,0 +1,8 @@
+.photo {
+	background-image: url("https://cdn.pixabay.com/photo/2016/12/12/15/30/dodge-charger-1901806_960_720.jpg");
+	display: inline-block;
+	width: 100%;
+	height:1000px;
+	background-repeat: repeat;
+	background-size: contain;
+}
