@@ -1,0 +1,34 @@
+.container {
+    display: inline-flex;
+    background-color: #f3f2ee;
+    height: 349px;
+    width: 677px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.box {
+    background-color: #ebe6e3;
+    padding: 15px;
+    justify-content: space-around;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.top {
+   align-self: flex-start;
+   flex: 1 1;
+   margin: 10px 0 0 13px;
+}
+
+.center {
+   align-self: center;
+   flex: 1 1;
+}
+
+.bottom {
+   align-self: flex-end;
+   flex: 1 1;
+   margin: 0 14px 14px 0;
+}

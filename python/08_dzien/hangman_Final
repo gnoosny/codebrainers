@@ -1,0 +1,74 @@
+# your code goes here
+from random import randint
+
+movies = ['The Godfather', 'Dark Knight', 'Pulp Fiction', 'Fight Club', 'Forrest Gump', 'Inception', 'Matrix']
+
+rand = -1
+rand = randint(0, 6)
+
+space = movies[rand].find(" ")
+title = movies[rand]
+print(title)
+print("Space at: ", space)
+
+password = title.lower()
+password_change = password
+
+print("psw: " + password)
+
+password_len = len(password)
+print(password_len)
+hasha = ""
+
+if space < 0:
+  hasha = "#" * password_len
+  print(hasha)
+elif space > 0:
+  hasha = "#" * space + " " + "#" * (password_len - space - 1)
+  print(hasha)
+
+letter = input("enter a letter: ")
+fails = 0
+
+#gallows = ["  ____\n |	  |\n |    O\n |	 -+-\n |	  |\n |   / \\\n/ \\"]
+#print(gallows[0], "\n\n")
+
+gallows = ["", "  \\", "/ \\", " |\n |\n |\n |\n |\n/ \\", "  ____ \n |\n |\n |\n |\n |\n/ \\", "  ____ \n |\n |    O\n |\n |\n |\n/ \\", "  ____ \n |\n |    O\n |	 -+-\n |	  \n |\n/ \\", "  ____ \n |\n |    O\n |	 -+-\n |	  |\n |\n/ \\", "  ____ \n |\n |    O\n |	 -+-\n |	  |\n |   /\n/ \\", "  ____ \n |\n |    O\n |	 -+-\n |	  |\n |   / \\\n/ \\", "  ____\n |	  |\n |    O\n |	 -+-\n |	  |\n |   / \\\n/ \\"]
+
+
+#print(galows[9])
+
+
+
+
+def search(letter, hasha, fails):
+  #for number, letter in enumerate(password):
+    hash_new = hasha
+    if letter in password_change:
+      print("\nI've guesed the letter!")
+      print(password_change.index(letter))
+      print ("fails", fails)
+      hash_new = list(hash_new)
+      hash_new[password_change.index(letter)] = letter
+      hash_new = "".join(hash_new)
+      print(hash_new)
+
+      if hash_new == password:
+        print("Congratulations you've won!")
+      letter = input("enter a letter: ")
+      search(letter, hash_new, fails)
+
+    else:
+      print("\nThere is no " + letter + " in the password")
+      fails += 1
+      print(gallows[fails])
+      print ("fails", fails)
+      letter = input("enter a letter: ")
+
+      if fails == 10:
+        print("You've lost!")
+      
+      search(letter, hash_new, fails)
+
+
+print(search(letter, hasha, fails))

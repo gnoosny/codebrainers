@@ -26,5 +26,24 @@ grep 'tail' ./ -R -n  szuka wyrazu tail we wszystkich plikach/katalogach obecneg
 grep 'tail' ./ -R -n -i  szuka wyrazu tail we wszystkich plikach/katalogach obecnego katalogu i podaje linie w ktorej jest wyraz tail oraz ignoruje wielkosc liter
 tar -xf plik.tar - rozpakowuje plik tar
 
+UPRAWNIENIA LINUXA
+RWX
+R - read (4)
+W - write (2)
+X - execute (1)
+
+kazde uprawnienie ma swoja cyferke i tak np 7 oznacza rwx
+uprawnienia dziela sie na uprawnienia ownera, grupy oraz reszty
+
+chmod - aplikacja do nadawania praw w linuxie
+chwon - zmiana przypisania uzytkownika lub grupy katalogu lub pliku
+
+przyklady:
+chmod 777 jakis_katalog/	- wszystko
+chwon dev:dev jakis_katalog/	- uzytkownik dev i grupa dev
+chmod 777 jakis_katalog/ -R 	- wszystkie uprawnienia dla jakiegos katalog, flaga R zmienia uprawnienia wszystkiego wglab katalogu
+
+
+
 
 

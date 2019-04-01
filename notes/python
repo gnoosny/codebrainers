@@ -57,4 +57,148 @@ dokument nazywajacy sie pep008 mowi o tym jak komentuje sie w pythonie (jaki jes
 
 pass - slowo ktore uzywa sie w pythonie jezeli nie ma instrukcji, ale chce sie przejsc dalej w warunku lub petli
 
+python -m http.server - uruchamianie serwera w pythonie
 
+konwersja 
+str(zmienna) - zmienna do stringa
+int(zmienna) - zmienna do inta
+float(zmienna) - zmienna do floata
+bool(zmienna) - zmienna do boola
+
+bool("") 	- False
+bool("cos") 	- True
+bool([]) 	- False
+bool(None) 	- False
+
+Operatory logiczne pythona:
+and
+or
+is
+not
+
+if zmienna and zmienna2 - jezeli zmienna i zmienna2 sa True to warunek sie spelni
+
+zmienna = 1 and 2 - python do zmiennej przypisze wartosc po and czyli 2
+
+zmienna = 1 or 2 - python przypisze do zmiennej pierwsza liczbe
+
+is - jest to operator porownania ktory sprawdza typ obiektu(tak jak === w javascript)
+
+range (1,11) - wypluwa liczby od 1 do 10
+
+inne typy:
+
+krotka = (1, 2, 3, 4, 5)
+slownik = {
+	"haslo": "definicja",
+	"amendment": "poprawka"
+}
+slownik["haslo"]
+
+zbior = {1, 2, 3, 4}
+
+krotka (tuple) - tuple sa niemozliwe do zmiany
+
+slownik (dict) - to jest ccos jak obiekt w js
+do slownika jako klucz mozna wrzucic krotke, ale nie mozna wrzucic listy
+w slowniku jako klucz mozna wykorzystywac inty, floaty, krotki oraz stringi
+
+zbior (set) - kolejnosc elementow w zbiorze jest nieokreslona i elementy sie nie powtarzaja
+czyli wypisanie zbioru {1, 2, 3, 2} da rezultat {1, 2, 3} i nie da sie zrobic np. zbior[2]
+
+sprawdzanie czy cos jes w liscie (tupli, slowniku)
+
+if cos in lsta:
+	print("cos znajduje sie w liscie")
+	
+docs.python.org - dokumentacja pythona
+
+
+continue - rozkaz kontynuacji petli
+break - skoncz petle jezeli warunek jest spelniony
+
+FUNKCJE:
+
+def fibonacci():	- definiowanie funkcji
+	pass
+	
+fibonacci()		- wywolywanie funkcji
+
+
+chwytanie wyjatkow:
+try: 
+	pass #kod ktory spowoduje powstanie bledow
+except ValueError:
+	print("wystapil problem")
+	
+OBSLUGA PLIKOW
+
+tryb pracy w pythonie w plikach:
+
+1. otwarcie
+2. praca
+3. zamkniecie
+
+
+f = open('plik.txt', {tryb otwarcia}{druga litera})
+
+przyklad:
+f = open('plik.txt', 'rt')
+
+tryby otwarcia plikow:
+r - read
+w - write
+a - append
+
+t - tryb tekstowy
+b - tryb binarny (bajtowy)
+
+f.write('Ten kurs jest swietny') - wpisywanie tresci do pliku
+f.close() 	- zamkniecie pliku
+
+f.closed - zwraca informacje True or False czy plik jest zamkniety
+
+druga litera nie jest wymagana
+
+Context manager:
+with open('plik2.txt', 'w') as f:
+     f.write("To jest drugie podejscie do zapisywania pliku")
+Taka instrukcja sprawia ze nie musimy zamykac pliku bo python robi to za nas z automatu
+
+open('plik.txt', {tryb otwarcia}, encoding = 'utf-8') - otwieranie z kodowaniem utf-8
+
+csv - comma seperated values (taki ubogi excel)
+pierwszy wiersz powinien byc naglowkowy, ale nie musi
+
+
+DATA MINING:
+1. zbieranie danych
+2. opisywanie danych
+3. tworzenie csv
+4. odczyt csv w pythonie
+5. konwersja wartosci (np ze stringa na int)
+6. zjadliwa forma danych
+
+Tetowanie oprogramowania:
+Travis-CI.org
+
+
+komentarze wielolinijkowe (docstring):
+""" cos tam
+cos tam
+cos tam """
+
+dunder - double under (podwojne znaki podkreslenia [podlogi __ ] )
+
+Importowanie do pythona:
+
+w katalogu z programem python wpisac
+python
+import nazwa_programu.py  - importowanie calego programyu
+
+from docstring import min - importowanie samej funkcji min z pliku docstring.py
+
+if __name__ == "__main__":	- to upewnia sie ze kod nie wykona sie w interpreterze jezeli tam zaimportujemy ten program
+mozna ten kod wywolac jedynie poprzez terminal:
+
+python program.py

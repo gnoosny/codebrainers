@@ -1,0 +1,34 @@
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: grey;
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+}
+
+.top {
+    top: 0;
+}
+
+.right{
+    left: 500px;
+}
+
+.bottom {
+    top: 500px;
+}
+
+.left {
+    left: 0;
+}
+
+#center {
+    top: 250px;
+    left: 250px;
+}

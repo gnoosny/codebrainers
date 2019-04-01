@@ -1,0 +1,324 @@
+@font-face{
+    font-family: KauschanScript;
+    src: url(../fonts/kaushan-script/KaushanScript-Regular.otf)
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    transition: .3s all;
+    padding: 20px 0;
+}
+
+nav .container .logo img{
+    display: block;
+    height: 60px;
+    transition: .5s all;
+}
+
+nav.blue {
+    background-color: #161671;
+    padding: 10px 0;
+    
+}
+
+nav.blue .container .logo img{
+    height: 40px;
+    
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 30px 0 0;
+
+}
+nav ul li:last-child {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: .6;
+    transition: 0.5s all;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+}
+
+#video{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 50px 0;
+}
+
+#video video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+#menu h2{
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+}
+
+#menu .container .columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu .container .columns .column {
+    width: 45%;
+}
+#menu .container .columns .column h3{
+    font-family: KauschanScript;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    display: block;
+}
+
+#menu .container .columns .column .dish {
+    display:flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+#menu .container .columns .column .dish .photo img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px 0 0;
+}
+
+#menu .container .columns .column .dish .name h4{
+    font-family: KauschanScript;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+#menu .container .columns .column .dish .name p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu .container .columns .column .dish .price h4{
+    font-family: KauschanScript;
+    font-size: 24px;
+    color: #b8860a;
+    margin: 0;
+}
+
+ @media only screen and (max-width: 992px) {
+    #menu .container .columns .column {
+        width: 100%;
+        
+    }
+    #menu .container .columns{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column ;
+        justify-content: space-between;
+    }
+   
+  } 
+
+  #instagram h1 {
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+  }
+
+
+  #instagram-content {
+      display: flex;
+      flex-wrap: wrap;
+
+  }
+
+  #instagram-content .item{
+      width: 10%;
+      overflow: hidden;
+  }
+
+  @media (max-width: 600px){
+    #instagram-content .item{
+        width: 25%;
+        overflow: hidden;
+    }
+  }
+
+  #instagram-content .item img{
+      cursor: pointer;
+      width: 100%;
+      display:block;
+      transition: .3s all;
+  }
+
+  #instagram-content .item img:hover{
+      transform: scale(1.2);
+  }
+
+  .arrow {
+      /* display: block; */
+      display: none;
+      height: 50px;
+      width: 50px;
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      background-color: #b8860a;
+      border-radius: 5px;
+      text-align: center;
+      color: #ffffff;
+      line-height: 50px;
+      box-shadow: 0 0 1px 1px #000;
+      transition: .5s all;
+      opacity: 0;
+  }
+
+  .arrow:hover {
+      font-size: 30px;
+      background-color: #161671;
+  }
+
+  body.move .arrow{
+    display: block;
+    opacity: 1;
+    transition: .5s all;
+  }
+
+  #info h1 {
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+  }
+  
+  #info {
+      background-color: #c5c5c5;
+      padding: 30px 0 0 0;
+  }
+
+  #map h1 {
+    font-family: KauschanScript;
+    font-size: 50px;
+    text-align: center;
+    color: #b8860a;
+    margin: 0 0 30px 0;
+  }
+
+  #googlemaps {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+
+  #info .container .icons {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 30px 0;
+      margin: 0 0 30px 0;
+  }
+
+  @media (max-width: 600px){
+    #info .container .icons {
+        flex-direction: column;
+    }
+    /* #info .container .icon {
+        display: flex;
+        flex-direction: column;
+    } */
+    #info .container .icons .icon:nth-child(1) {
+        color: blueviolet;
+        order: 2;
+    }
+    #info .container .icons .icon:nth-child(2) {
+        color: blue;
+        order: 3;
+    }
+    #info .container .icons .icon:nth-child(3) {
+        color: green;
+        order: 1;
+    }
+  }
+
+  #info .container .icons .icon .sign{
+    font-size: 30px;
+    text-align:center;
+    color: #b8860a;
+    margin: 0 0 20px 0;
+  }
+  #info .container .icons .icon .name {
+    font-family: KauschanScript;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+  }
+
+  #info .container .icons .icon .description {
+    font-family: 'Open Sans', sans-serif;;
+    text-align: center;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+  }
+
+  

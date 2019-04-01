@@ -1,0 +1,19 @@
+ls
+pwd
+mkdir
+rmdir
+rm
+rm -R
+ls -lathr
+mv
+cp
+cat
+tail
+less
+cd
+cd .
+cd ..
+cd /
+cd ~
+du
+touch

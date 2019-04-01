@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#o-mnie">O mnie</a></li>
+            <li>
+                <a href="#projekty">Projekty</a>
+                <ul>
+                    <li><a href="#projekt1">projekt1</a></li>
+                    <li><a href="#projekt2">projekt2</a></li>
+                    <li><a href="#projekt3">projekt3</a></li>
+                </ul>
+            </li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#cos">cos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="o-mnie" class="section">
+            <h1>Cześć, poznajmy się</h1>
+            <div class="krolik" >
+                <img src="https://cdn.pixabay.com/photo/2016/11/21/16/59/animal-1846462_960_720.jpg" alt="krolik" id="kroliczek">
+            </div>
+            <div class="description">
+                <button type="button" id="showText">Pokaz kilka slow o mnie</button>
+                <div class="text">
+                    Tu jakis tekst o mnie, ktory jest ukryty
+                </div>
+            </div>
+        </section>
+        <section id="projekty" class="section">
+            <h1>Moje projekty</h1>
+            <div class="foto">
+                <img src="https://cdn.pixabay.com/photo/2018/06/16/00/46/seashells-3478015_960_720.jpg" alt="slimaki">
+                <img src="https://cdn.pixabay.com/photo/2018/03/08/22/48/grass-3210111_960_720.jpg" alt="piesek">
+                <img src="https://cdn.pixabay.com/photo/2014/07/18/09/03/mandrill-396289_960_720.jpg" alt="malpa">
+            </div>
+        </section>
+        <section id="kontakt" class="section">
+            <h1>Skontaktuj się ze mną</h1>
+        </section>
+        <section id="cos" class="section">
+            <h1>Nie mam pomysłu co tu wpisać</h1>
+            <div class="events">
+                <img src="https://cdn.pixabay.com/photo/2017/08/02/19/27/car-2573038_960_720.jpg" alt="beetle" id="beetle">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="date">Dzisiejsza data to:<span class="currentYear"></span></div>
+    </footer>
+    <script src="dom.js"></script>
+</body>
+
+</html>
