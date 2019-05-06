@@ -1,0 +1,1 @@
+SELECT DISTINCT author From books
