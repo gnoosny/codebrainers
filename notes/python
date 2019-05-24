@@ -202,3 +202,15 @@ if __name__ == "__main__":	- to upewnia sie ze kod nie wykona sie w interpreterz
 mozna ten kod wywolac jedynie poprzez terminal:
 
 python program.py
+
+
+FUNKCJE ANONIMOWE
+
+Slowo klucz lambda
+gdy wpiszemy lambda python bedzie wiedzial ze jest to funkcja anonimowa
+Funkcja anonimowa to taka mini funkcja
+Przyklad funkcji dodajacej argument a do b:
+
+lambda a, b: a + b
+
+list comprehension --- 
