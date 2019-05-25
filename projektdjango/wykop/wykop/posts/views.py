@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import TemplateView, View
+from django.views.generic import TemplateView, View, ListView
+
+from .models import Post
 
 # def hello_world(request):
 #     # return HttpResponse('<div style="text-align:center; width: 100%;"><h1><b>Hello world!</b></h1></div>')
@@ -13,3 +15,7 @@ from django.views.generic import TemplateView, View
 
 class HelloWorldView(TemplateView):
     template_name = 'posts/index.html'
+
+class PostList(ListView):
+    template_name = 'posts/list.html'
+    model = Post

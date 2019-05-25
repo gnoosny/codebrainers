@@ -17,10 +17,18 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 
-from wykop.posts.views import HelloWorldView
+from django.conf import settings
+from wykop.posts.views import HelloWorldView, PostList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('wykop.accounts.urls')),
-    path('', HelloWorldView.as_view())
+    path('', HelloWorldView.as_view()),
+    path('posts/', PostList.as_view())
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__', include(debug_toolbar.urls)),
+    ] + urlpatterns
