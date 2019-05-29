@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load embed_video_tags %}
+
+
+{% block content %}
+    <div>
+        <a href="{% url 'posts:list'%}">Back</a>
+    </div>
+    <div class="row">
+        {% comment %} <h1>Title: {{ object.title }}</h1> {% endcomment %}
+        <div class="col-2 post-img">
+        {% if object.image %}
+            <p><img src="{{ object.image.url }}"></p>
+        {% endif %}
+        
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <p>{{ object.content }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+            <p>Reporter: {{ object.author }}</p>
+                </div>
+                <div class="col-8">
+                    <p>Published: {{ object.date|date:"l j E G:i"}}</p>
+                </div>
+            </div>
+        </div>
+        {% comment %} <p>Date: {{ now|date }}</p> {% endcomment %}
+        <div class="col-2">
+            <div class="row">
+                <div class="col-12">
+                    <a href="{% url 'posts:update' pk=object.pk%}">Edit</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+            <a href="{% url 'posts:delete' pk=object.pk%}">Delete</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+        <p> {{ object.score }}
+        </div>
+
+        <div class="vote">
+            {% include 'posts/post_vote.html' with value=1 label='+'%}
+            {% include 'posts/post_vote.html' with value=-1 label='-'%}
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-12 video">
+             {% video object.video as my_video %}
+            {% comment %} URL: {{ my_video.url }}
+            Thumbnail: {{ my_video.thumbnail }}
+            Backend: {{ my_video.backend }} {% endcomment %}
+
+            {% video my_video "large" %}
+        {% endvideo %}
+        </div>
+    </div>
+{% endblock %}
+

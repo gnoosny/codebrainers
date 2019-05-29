@@ -1,0 +1,100 @@
+nav {
+    background-image: linear-gradient(to right, #ffffff, #eeedfa, #dadcf5, #c5cbf1, #acbced, #acbced, #acbced, #acbced, #c5cbf1, #dadcf5, #eeedfa, #ffffff);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    width:100%;
+}
+
+.nav {
+    padding: 0 0 10px 0;
+    margin: 0 auto;
+    max-width:1200px;
+}
+
+.content {
+    padding: 20px 0 0 0;
+}
+
+.post-title {
+    background-color: rgb(0, 110, 255);
+    border-radius:5px;
+}
+
+.post-title h2 {
+    margin: 10px 0;;
+}
+
+.post-title a{
+    color: #000;
+    transition: .4s all;
+}
+.post-title a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+
+.post-content {
+    padding: 15px 0 0 0;
+}
+
+.bottom {
+    padding: 0 0 20px 0;
+}
+
+.vote{
+    display: flex;
+}
+
+.form-vote-\+ input, .form-vote-\- input{
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius:5px;
+    padding: 15px 25px;
+    color: #fff;
+    transition: .5s all;
+    width: 70px;
+}
+
+.form-vote-\+ input:hover, .form-vote-\- input:hover{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.form-vote-\+{
+    margin: 0 20px 0 0;
+   
+}
+
+.form-vote-\+.selected input{
+    background-color: rgb(7, 230, 7);
+}
+
+.form-vote-\-.selected input{
+    background-color: rgb(230, 14, 7);
+}
+
+.selected input{
+    border: 1px solid #fff;
+    border-radius:5px;
+    color: #fff;
+    transition: .5s all;
+}
+
+.selected input:hover{
+    background-color: yellow;
+    color: #000;
+    border-color: #000;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.post-img img{
+    max-height:100%;
+    max-width:100%;
+    padding: 10px 0;
+}
+
+.video {
+    margin: 0 auto !important;
+}

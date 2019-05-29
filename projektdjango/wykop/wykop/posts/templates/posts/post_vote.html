@@ -1,0 +1,12 @@
+{% load vote %}
+
+{% user_vote as user_vote%}
+
+<form 
+    class="form-vote-{{ label }} {% if user_vote %} selected {% endif %}"
+    method="post" 
+    action="{% url 'posts:vote' post_pk=object.pk %}">
+        {% csrf_token %}
+        <input type="hidden" name="value" value="{{ value }}">
+        <input type="submit" value="{{ label }}">
+</form>

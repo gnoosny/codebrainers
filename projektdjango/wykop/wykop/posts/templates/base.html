@@ -15,9 +15,15 @@
     <nav>
             <div class="row nav">
                 <div class="col-3">
-                    <h1>Django</h1>
+                    <h1>Django :)</h1>
                 </div>
-                <div class="col-1 offset-4 text-right">
+                <div class="col-1">
+                    <a href="{% url 'posts:list' %}">Posts</a>
+                </div>
+                <div class="col-2">
+                    <a href="{% url 'posts:top-list' %}">Top posts</a>
+                </div>
+                <div class="col-1 offset-1 text-right">
                 {% if user.is_authenticated %}
                     <a href="{% url 'posts:add'%}">add</a>
                 {% endif %}
@@ -49,8 +55,10 @@
                 <h1>
                     {{ title }}
                 </h1>
-                
+            </div>
+    </div>
             {% endblock %} 
+            {% block breadcrumbs %} {% endblock %}
             {% block content %} {% endblock %}
         </div>
     </div>

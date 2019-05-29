@@ -24,3 +24,4 @@ class LoginView(DjangoLoginView):
         if request.user.is_authenticated:
             return HttpResponseRedirect('/')
         return super().dispatch(request, *args, **kwargs)
+
