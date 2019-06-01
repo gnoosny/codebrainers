@@ -22,7 +22,19 @@
             </div>
             <div class="row">
                 <div class="col-4">
-            <p>Reporter: {{ object.author }}</p>
+                
+            <p>Reporter: 
+                {% if object.author.banned == True %} 
+                    <div class="banned">
+                        {{ object.author }}
+                    </div>
+                {% else %}
+                    <div>
+                        {{ object.author }}
+                    </div>
+                {% endif %}
+            </p>
+                
                 </div>
                 <div class="col-8">
                     <p>Published: {{ object.date|date:"l j E G:i"}}</p>
@@ -42,14 +54,32 @@
                 </div>
             </div>
         </div>
-
+        
         <div>
         <p> {{ object.score }}
         </div>
+        <div>
 
+        </div>
+        {% if user.is_authenticated and user.banned == False%}
         <div class="vote">
             {% include 'posts/post_vote.html' with value=1 label='+'%}
             {% include 'posts/post_vote.html' with value=-1 label='-'%}
+        </div>
+        {% endif %}
+        <div class="ban-btn">
+            {% if user.is_superuser %}
+            <form method="post" action="{% url 'accounts:ban' object.author.pk %}">
+                {% csrf_token %}
+                {% if object.author.banned == False%}
+                <input type="hidden" name="set" value=1>
+                <input type="submit" value="Dzban" class="ban-button ban">
+                {% else %}
+                <input type="hidden" name="set" value=0>
+                <input type="submit" value="UnDzban" class="ban-button unban">
+                {% endif %}
+            </form>
+            {% endif %}
         </div>
         
     </div>
@@ -63,6 +93,20 @@
             {% video my_video "large" %}
         {% endvideo %}
         </div>
+    </div>
+    <div class="row">
+                     
+            <form method="post" action="{% url 'posts:comment' object.pk %}">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <input type="submit" value="Save" {% if user.banned%} disabled {% endif %}>
+            </form>
+    
+    </div>
+    <div class="row">
+        {% for comment in object.comments.all%}
+            {% include 'posts/comment.html' %}
+        {% endfor %}
     </div>
 {% endblock %}
 

@@ -5,7 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.db.models.aggregates import Sum
 from django.db.models.functions import Coalesce
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -13,7 +13,9 @@ from django.views.generic import ListView, TemplateView, UpdateView, View
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 
-from .models import Post, Vote
+
+from .models import Post, Vote, Comment
+from .forms import CommentForm
 
 # def hello_world(request):
 #     # return HttpResponse('<div style="text-align:center; width: 100%;"><h1><b>Hello world!</b></h1></div>')
@@ -44,9 +46,11 @@ class PostView(DetailView):
     template_name = 'posts/post.html'
     model = Post
 
+
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data['title'] = self.object.title
+        data['comment_form'] = CommentForm()
         return data
 
 class PostCreate(LoginRequiredMixin, CreateView):
@@ -56,6 +60,12 @@ class PostCreate(LoginRequiredMixin, CreateView):
     extra_context = {
         'title': "Add ",
     }
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.banned == True:
+            return HttpResponseForbidden()
+        else:
+            return super().dispatch(request, *args, **kwargs)
 
 
     def form_valid(self, form):
@@ -67,6 +77,11 @@ class UpdatePost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['title', 'content', 'image']
 
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.banned == True:
+            return HttpResponseForbidden()
+        else:
+            return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
@@ -95,6 +110,12 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         )
 
 class VoteView(LoginRequiredMixin, View):
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.banned == True:
+            return HttpResponseForbidden()
+        else:
+            return super().dispatch(request, *args, **kwargs)
+
     def post(self, request, *args, **kwargs):
         user = request.user
         post_pk = kwargs.get('post_pk')
@@ -107,3 +128,29 @@ class VoteView(LoginRequiredMixin, View):
             }
         )
         return redirect(post)
+
+class CommentCreateView(LoginRequiredMixin, CreateView):
+    model = Comment
+    fields = ['text']
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.banned:
+            return HttpResponseForbidden()
+        else:
+            return super().dispatch(request, *args, **kwargs)
+
+    def get_post(self):
+        post_pk = self.kwargs.get('post_pk')
+        return Post.objects.get(pk=post_pk)
+
+    def form_valid(self, form):
+        post_pk = self.kwargs.get('post_pk')
+        form.instance.user = self.request.user
+        form.instance.post = self.get_post()
+        return super().form_valid(form)
+    
+    def get_success_url(self):
+        post_pk = self.kwargs.get('post_pk')
+        return self.get_post().get_absolute_url()
+
+     

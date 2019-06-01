@@ -24,7 +24,7 @@
                     <a href="{% url 'posts:top-list' %}">Top posts</a>
                 </div>
                 <div class="col-1 offset-1 text-right">
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated and user.banned == False%}
                     <a href="{% url 'posts:add'%}">add</a>
                 {% endif %}
                     

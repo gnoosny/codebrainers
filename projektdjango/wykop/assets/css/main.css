@@ -98,3 +98,32 @@ nav {
 .video {
     margin: 0 auto !important;
 }
+
+.banned {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.ban-btn .ban-button{
+    /* background-color: rgb(255, 0, 0); */
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 30px;
+    
+}
+
+.ban-btn .ban-button:hover{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.ban {
+    background-color: rgb(255, 0, 0);
+    color:#fff;
+}
+
+.unban {
+    background-color: rgb(0, 255, 0);
+}
+
