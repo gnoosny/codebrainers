@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load bootstrap_pagination %}
+{% load embed_video_tags %}
+
+
+{% block content %}
+   
+         {% comment %} <div class="row">
+
+                <div class="col-2">
+                Tytuł
+                </div>
+                <div class="col-2">
+                    Treść
+                </div>
+                <div class="col-2">
+                    Autor
+                </div>
+                <div class="col-2">
+                    Data dodania
+                </div>
+          
+            
+        </div> {% endcomment %}
+        {% for post in object_list %}
+            
+            <div class="row post-title">
+                <div class=" col-2 post-img ">
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}">
+                    {% endif %}
+
+                      {% video post.video as my_video %}
+             
+                        <img src='{{ my_video.thumbnail }}'>
+                        
+
+                        
+                    {% endvideo %}
+
+                </div>
+                <div class="col-10 ">
+                <a href="{% url 'posts:detail' pk=post.pk %}">
+                    <h2>{{ post.title }}</a> </h2>
+                    <p>Score {{ post.score }}</p>
+                </div>
+            </div>
+            <div class="row post-content">
+                <div class="col-12 post.content">
+                   <p> {{ post.content | truncatewords:10 }} </p>
+                </div>
+            </div>
+            <div class="row bottom">
+                <div class="col-2 offset-8">
+                    Author: {{ post.author }}
+                </div>
+                <div class="col-2">
+                    Date: {{ post.date | date:"d E G:i" }}
+                </div>
+            </div>
+        {% empty %}
+            <div>>No articles yet.</div>
+        {% endfor %}
+        {% bootstrap_paginate page_obj %}
+        {% comment %} {{ page_obj }} {% endcomment %}
+{% endblock %}
+
